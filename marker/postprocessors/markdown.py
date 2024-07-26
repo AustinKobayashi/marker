@@ -171,7 +171,7 @@ def merge_lines(blocks: List[List[MergedBlock]]):
                     block_text = line.text
 
         if settings.PAGINATE_OUTPUT and idx < len(blocks) - 1:
-            block_text += "\n\n" + "-" * 16 + "\n\n" # Page separator horizontal rule
+            block_text += "\n\n" + "* * *" + "\n\n" # Page separator horizontal rule
 
     # Append the final block
     text_blocks.append(
