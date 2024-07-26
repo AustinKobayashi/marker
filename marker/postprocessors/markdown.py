@@ -9,7 +9,7 @@ from marker.settings import settings
 
 def escape_markdown(text):
     # List of characters that need to be escaped in markdown
-    characters_to_escape = r"[#]\\`*_{}[]()#+-.!"
+    characters_to_escape = r"([\\`*_\{\}\[\]\(\)#\+\-\.!])"
     # Escape each of these characters with a backslash
     escaped_text = re.sub(characters_to_escape, r'\\\g<0>', text)
     return escaped_text
